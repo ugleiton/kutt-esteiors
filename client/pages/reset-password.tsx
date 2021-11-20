@@ -66,14 +66,14 @@ const ResetPassword: NextPage<Props> = ({ token }) => {
     <AppWrapper>
       <Col width={600} maxWidth="100%" px={3}>
         <H2 my={3} bold>
-          Reset password
+          Resetar a senha
         </H2>
         <Text mb={4}>
-          If you forgot you password you can use the form below to get reset
-          password link.
+          Se você esqueceu sua senha, você pode usar o formulário abaixo para redefinir
+          link de senha.
         </Text>
         <Text {...label("homepage")} as="label" mt={2} fontSize={[15, 16]} bold>
-          Email address
+          Email
         </Text>
         <Flex
           as="form"
@@ -83,7 +83,7 @@ const ResetPassword: NextPage<Props> = ({ token }) => {
         >
           <TextInput
             {...email("email")}
-            placeholder="Email address..."
+            placeholder="Email"
             height={[44, 54]}
             width={[1, 1 / 2]}
             mr={3}
@@ -92,7 +92,7 @@ const ResetPassword: NextPage<Props> = ({ token }) => {
           />
           <Button type="submit" height={[40, 44]} my={3}>
             {loading && <Icon name={"spinner"} stroke="white" mr={2} />}
-            Reset password
+            Resetar Senha
           </Button>
         </Flex>
         <Text fontSize={14} color={message.color} mt={2} normal>
