@@ -167,7 +167,7 @@ const LoginPage = () => {
             <Link href="/reset-password">
               <ALink
                 href="/reset-password"
-                title="Forget password"
+                title="squeceu a Senha"
                 fontSize={14}
                 alignSelf="flex-start"
                 my={16}
