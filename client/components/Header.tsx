@@ -58,7 +58,7 @@ const Header: FC = () => {
       <Link href="/login">
         <ALink
           href="/login"
-          title={!DISALLOW_REGISTRATION ? "login / signup" : "login"}
+          title={!DISALLOW_REGISTRATION ? "Logar / Cadastre-se" : "login"}
           forButton
         >
           <Button height={[32, 40]}>
@@ -71,8 +71,8 @@ const Header: FC = () => {
   const logout = isAuthenticated && (
     <Li>
       <Link href="/logout">
-        <ALink href="/logout" title="logout" fontSize={[14, 16]}>
-          Log out
+        <ALink href="/logout" title="Sair" fontSize={[14, 16]}>
+          Sair
         </ALink>
       </Link>
     </Li>
@@ -80,8 +80,8 @@ const Header: FC = () => {
   const settings = isAuthenticated && (
     <Li>
       <Link href="/settings">
-        <ALink href="/settings" title="Settings" forButton>
-          <Button height={[32, 40]}>Settings</Button>
+        <ALink href="/settings" title="Configurações" forButton>
+          <Button height={[32, 40]}>Configurações</Button>
         </ALink>
       </Link>
     </Li>
