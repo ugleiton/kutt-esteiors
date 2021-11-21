@@ -39,8 +39,8 @@ const VerifyEmail: NextPage<Props> = ({ token }) => {
         />
         <H2 textAlign="center" normal>
           {token
-            ? "Email address verified successfully."
-            : "Couldn't verify the email address."}
+            ? "Email verificado com sucesso."
+            : "Não foi possível verificar o endereço de e-mail."}
         </H2>
       </Flex>
       <Footer />
