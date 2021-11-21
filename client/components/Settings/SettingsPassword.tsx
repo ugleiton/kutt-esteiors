@@ -37,7 +37,7 @@ const SettingsPassword: FC = () => {
       formState.clear();
       setMessage(res.data.message, "green");
     } catch (err) {
-      setMessage(err?.response?.data?.error || "Couldn't update the password.");
+      setMessage(err?.response?.data?.error || "Não foi possível atualizar a senha.");
     }
     setLoading(false);
   };
@@ -47,7 +47,7 @@ const SettingsPassword: FC = () => {
       <H2 mb={4} bold>
         Change password
       </H2>
-      <Text mb={4}>Enter a new password to change your current password.</Text>
+      <Text mb={4}>Digite uma nova senha para alterar sua senha atual.</Text>
       <Text
         {...label("password")}
         as="label"
@@ -64,12 +64,12 @@ const SettingsPassword: FC = () => {
             validate: value => {
               const val = value.trim();
               if (!val || val.length < 8) {
-                return "Password must be at least 8 chars.";
+                return "A senha deve ter pelo menos 8 caracteres.";
               }
             }
           })}
           autocomplete="off"
-          placeholder="New password..."
+          placeholder="Nova Senha"
           width={[1, 2 / 3]}
           mr={3}
           required
