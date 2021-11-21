@@ -91,7 +91,7 @@ const Shortener = () => {
       formState.clear();
     } catch (err) {
       setMessage(
-        err?.response?.data?.error || "Couldn't create the short link."
+        err?.response?.data?.error || "Não foi possível criar o link curto."
       );
     }
     setLoading(false);
@@ -201,7 +201,7 @@ const Shortener = () => {
       >
         <TextInput
           {...text("target")}
-          placeholder="Paste your long URL"
+          placeholder="Cole o seu URL longo"
           placeholderSize={[16, 17, 18]}
           fontSize={[18, 20, 22]}
           aria-label="target"
@@ -235,7 +235,7 @@ const Shortener = () => {
           onChange: e => {
             if (!isAuthenticated) {
               setMessage(
-                "You need to log in or sign up to use advanced options."
+                "Você precisa fazer login ou se inscrever para usar as opções avançadas."
               );
               return false;
             }
@@ -289,7 +289,7 @@ const Shortener = () => {
               </Text>
               <TextInput
                 {...text("customurl")}
-                placeholder="Custom address..."
+                placeholder="Endereço personalizado"
                 autocomplete="off"
                 data-lpignore
                 pl={[3, 24]}
@@ -312,7 +312,7 @@ const Shortener = () => {
               </Text>
               <TextInput
                 {...password("password")}
-                placeholder="Password..."
+                placeholder="Senha"
                 autocomplete="off"
                 data-lpignore
                 pl={[3, 24]}
@@ -337,7 +337,7 @@ const Shortener = () => {
               </Text>
               <TextInput
                 {...text("expire_in")}
-                placeholder="2 minutes/hours/days"
+                placeholder="2 minutos/horas/dias"
                 data-lpignore
                 pl={[3, 24]}
                 pr={[3, 24]}
@@ -360,7 +360,7 @@ const Shortener = () => {
               </Text>
               <TextInput
                 {...text("description")}
-                placeholder="Description"
+                placeholder="Descrição"
                 data-lpignore
                 pl={[3, 24]}
                 pr={[3, 24]}
