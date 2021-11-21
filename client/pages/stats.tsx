@@ -52,7 +52,7 @@ const StatsPage: NextPage<Props> = ({ id }) => {
     errorMessage = (
       <Flex mt={3}>
         <Icon name="x" size={32} mr={3} stroke={Colors.TrashIcon} />
-        <H2>You need to login to view stats.</H2>
+        <H2>Você precisa fazer o login para ver as estatísticas.</H2>
       </Flex>
     );
   }
@@ -61,7 +61,7 @@ const StatsPage: NextPage<Props> = ({ id }) => {
     errorMessage = (
       <Flex mt={3}>
         <Icon name="x" size={32} mr={3} stroke={Colors.TrashIcon} />
-        <H2>Couldn't get stats.</H2>
+        <H2>Não foi possível obter estatísticas.</H2>
       </Flex>
     );
   }
@@ -81,8 +81,8 @@ const StatsPage: NextPage<Props> = ({ id }) => {
           <Col width={1200} maxWidth="95%" alignItems="stretch" m="40px 0">
             <Flex justifyContent="space-between" alignItems="center" mb={3}>
               <H1 fontSize={[18, 20, 24]} light>
-                Stats for:{" "}
-                <ALink href={data.link} title="Short link">
+                Estatística para:{" "}
+                <ALink href={data.link} title="Link Curto">
                   {removeProtocol(data.link)}
                 </ALink>
               </H1>
@@ -115,10 +115,10 @@ const StatsPage: NextPage<Props> = ({ id }) => {
                 </H4>
                 <Flex>
                   {[
-                    ["allTime", "All Time"],
-                    ["lastMonth", "Month"],
-                    ["lastWeek", "Week"],
-                    ["lastDay", "Day"]
+                    ["allTime", "Todo Tempo"],
+                    ["lastMonth", "Mês"],
+                    ["lastWeek", "Semana"],
+                    ["lastDay", "Dia"]
                   ].map(([p, n]) => (
                     <NavButton
                       ml={10}
@@ -141,10 +141,10 @@ const StatsPage: NextPage<Props> = ({ id }) => {
                   >
                     {total}
                   </Span>{" "}
-                  tracked clicks in {periodText}.
+                  cliques rastreados em {periodText}.
                 </H2>
                 <Text fontSize={[13, 14]} color={Colors.StatsLastUpdateText}>
-                  Last update in{" "}
+                  Última atualização em{" "}
                   {formatDate(new Date(data.updatedAt), "hh:mm aa")}
                 </Text>
                 <Flex width={1} mt={4}>
@@ -156,13 +156,13 @@ const StatsPage: NextPage<Props> = ({ id }) => {
                     <Flex width={1}>
                       <Col flex="1 1 0">
                         <H2 mb={3} light>
-                          Referrals.
+                         Referências.
                         </H2>
                         <Pie data={stats.stats.referrer} />
                       </Col>
                       <Col flex="1 1 0">
                         <H2 mb={3} light>
-                          Browsers.
+                          Navegadores.
                         </H2>
                         <Bar data={stats.stats.browser} />
                       </Col>
@@ -171,13 +171,13 @@ const StatsPage: NextPage<Props> = ({ id }) => {
                     <Flex width={1}>
                       <Col flex="1 1 0">
                         <H2 mb={3} light>
-                          Country.
+                          País.
                         </H2>
                         <Map data={stats.stats.country} />
                       </Col>
                       <Col flex="1 1 0">
                         <H2 mb={3} light>
-                          OS.
+                          Sistema Operacional.
                         </H2>
                         <Bar data={stats.stats.os} />
                       </Col>
@@ -188,10 +188,10 @@ const StatsPage: NextPage<Props> = ({ id }) => {
             </Col>
             <Box alignSelf="center" my={64}>
               <Link href="/">
-                <ALink href="/" title="Back to homepage" forButton>
+                <ALink href="/" title="Voltar para home" forButton>
                   <Button>
                     <Icon name="arrowLeft" stroke="white" mr={2} />
-                    Back to homepage
+                    Voltar para home
                   </Button>
                 </ALink>
               </Link>
