@@ -54,9 +54,9 @@ const ResetPassword: NextPage<Props> = ({ token }) => {
       await axios.post(APIv2.AuthResetPassword, {
         email: formState.values.email
       });
-      setMessage("Reset password email has been sent.", "green");
+      setMessage("O e-mail de redefinição de senha foi enviado.", "green");
     } catch (error) {
-      setMessage(error?.response?.data?.error || "Couldn't reset password.");
+      setMessage(error?.response?.data?.error || "Não foi possível redefinir a senha.");
     }
     setLoading(false);
   };
