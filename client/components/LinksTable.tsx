@@ -278,7 +278,7 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
           )}
           {link.visit_count > 0 && (
             <Link href={`/stats?id=${link.id}`}>
-              <ALink title="View stats" forButton>
+              <ALink title="Ver estatísticas" forButton>
                 <Action
                   name="pieChart"
                   stroke={Colors.PieIcon}
@@ -368,7 +368,7 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
                 <Flex as="form">
                   <TextInput
                     {...text("address")}
-                    placeholder="Custom address..."
+                    placeholder="Endereço personalizado"
                     placeholderSize={[13, 14]}
                     fontSize={[14, 15]}
                     height={[40, 44]}
@@ -394,7 +394,7 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
                 <Flex as="form">
                   <TextInput
                     {...text("description")}
-                    placeholder="description..."
+                    placeholder="Descrição"
                     placeholderSize={[13, 14]}
                     fontSize={[14, 15]}
                     height={[40, 44]}
@@ -418,7 +418,7 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
                 <Flex as="form">
                   <TextInput
                     {...text("expire_in")}
-                    placeholder="2 minutes/hours/days"
+                    placeholder="2 minutos/horas/dias"
                     placeholderSize={[13, 14]}
                     fontSize={[14, 15]}
                     height={[40, 44]}
@@ -438,11 +438,11 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
               onClick={onEdit}
             >
               <Icon
-                name={editLoading ? "spinner" : "refresh"}
+                name={editLoading ? "spinner" : "Atualizar"}
                 stroke="white"
                 mr={2}
               />
-              {editLoading ? "Updating..." : "Update"}
+              {editLoading ? "Updating..." : "Atualizar"}
             </Button>
             {editMessage.text && (
               <Text mt={3} fontSize={15} color={editMessage.color}>
@@ -472,7 +472,7 @@ const Row: FC<RowProps> = ({ index, link, setDeleteModal }) => {
             Ban link?
           </H2>
           <Text mb={24} textAlign="center">
-            Are you sure do you want to ban the link{" "}
+            Tem certeza que deseja banir o link{" "}
             <Span bold>"{removeProtocol(link.link)}"</Span>?
           </Text>
           <RowCenter>
@@ -519,7 +519,7 @@ const LinksTable: FC = () => {
   const isAdmin = useStoreState(s => s.auth.isAdmin);
   const links = useStoreState(s => s.links);
   const { get, remove } = useStoreActions(s => s.links);
-  const [tableMessage, setTableMessage] = useState("No links to show.");
+  const [tableMessage, setTableMessage] = useState("Não há links para mostrar.");
   const [deleteModal, setDeleteModal] = useState(-1);
   const [deleteLoading, setDeleteLoading] = useState(false);
   const [deleteMessage, setDeleteMessage] = useMessage();
@@ -533,7 +533,7 @@ const LinksTable: FC = () => {
 
   useEffect(() => {
     get(options).catch(err =>
-      setTableMessage(err?.response?.data?.error || "An error occurred.")
+      setTableMessage(err?.response?.data?.error || "Um erro ocorreu.")
     );
   }, [options.limit, options.skip, options.all]);
 
@@ -647,10 +647,10 @@ const LinksTable: FC = () => {
             {Nav}
           </Tr>
           <Tr>
-            <Th {...ogLinkFlex}>Original URL</Th>
-            <Th {...createdFlex}>Created</Th>
-            <Th {...shortLinkFlex}>Short URL</Th>
-            <Th {...viewsFlex}>Views</Th>
+            <Th {...ogLinkFlex}>URL Original</Th>
+            <Th {...createdFlex}>Criado</Th>
+            <Th {...shortLinkFlex}>URL Curta</Th>
+            <Th {...viewsFlex}>Visualização</Th>
             <Th {...actionsFlex}></Th>
           </Tr>
         </thead>
