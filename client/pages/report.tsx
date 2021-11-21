@@ -27,10 +27,10 @@ const ReportPage = () => {
     setMessage();
     try {
       await axios.post(`${APIv2.Links}/report`, { link: formState.values.url });
-      setMessage("Thanks for the report, we'll take actions shortly.", "green");
+      setMessage("Obrigado pelo relatório, tomaremos medidas em breve.", "green");
       formState.clear();
     } catch (error) {
-      setMessage(error?.response?.data?.error || "Couldn't send report.");
+      setMessage(error?.response?.data?.error || "Não foi possível enviar relatório.");
     }
 
     setLoading(false);
@@ -43,14 +43,14 @@ const ReportPage = () => {
           Report abuse
         </H2>
         <Text mb={3}>
-          Report abuses, malware and phishing links to the below email address
-          or use the form. We will take actions shortly.
+          Denuncie abusos, malware e links de phishing para o endereço de e-mail abaixo
+          ou use o formulário. Tomaremos medidas em breve.
         </Text>
         <Text mb={4}>
           {(publicRuntimeConfig.REPORT_EMAIL || "").replace("@", "[at]")}
         </Text>
         <Text mb={3}>
-          <Span bold>URL containing malware/scam:</Span>
+          <Span bold>URL contendo malware/scam:</Span>
         </Text>
         <Flex
           as="form"
