@@ -48,12 +48,12 @@ const SettingsApi: FC = () => {
         API
       </H2>
       <Text mb={4}>
-        In additional to this website, you can use the API to create, delete and
-        get shortend URLs. If
-        {" you're"} not familiar with API, {"don't"} generate the key. DO NOT
-        share this key on the client side of your website.{" "}
+        Além deste site, você pode usar a API para criar, excluir e
+        obter URLs encurtados. Se
+        {" you're"} não estou familiarizado com API, {"don't"} gerar a chave. NÃO
+        compartilhe esta chave no lado do cliente do seu website.{" "}
         <ALink href="https://docs.kutt.it" title="API Docs" target="_blank">
-          Read API docs.
+          Leia os documentos da API.
         </ALink>
       </Text>
       {apikey && (
