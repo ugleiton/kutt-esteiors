@@ -243,7 +243,7 @@ const Shortener = () => {
           }
         })}
         checked={formState.values.showAdvanced}
-        label="Show advanced options"
+        label="Mostrar opções avançadas"
         mt={[3, 24]}
         alignSelf="flex-start"
       />
