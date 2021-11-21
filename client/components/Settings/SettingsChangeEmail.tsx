@@ -37,7 +37,7 @@ const SettingsChangeEmail: FC = () => {
       );
       setMessage(res.data.message, "green");
     } catch (error) {
-      setMessage(error?.response?.data?.error || "Couldn't send email.");
+      setMessage(error?.response?.data?.error || "Não foi possível enviar e-mail.");
     }
     setLoading(false);
   };
@@ -45,7 +45,7 @@ const SettingsChangeEmail: FC = () => {
   return (
     <Col alignItems="flex-start" maxWidth="100%">
       <H2 mb={4} bold>
-        Change email address
+        Mude o endereço de email
       </H2>
       <Col alignItems="flex-start" onSubmit={onSubmit} width={1} as="form">
         <Flex width={1} flexDirection={["column", "row"]}>
@@ -57,11 +57,11 @@ const SettingsChangeEmail: FC = () => {
               fontSize={[15, 16]}
               bold
             >
-              Password:
+              Senha:
             </Text>
             <TextInput
               {...password("changeemailpass")}
-              placeholder="Password..."
+              placeholder="Senha..."
               maxWidth="240px"
               required
             />
@@ -74,7 +74,7 @@ const SettingsChangeEmail: FC = () => {
               fontSize={[15, 16]}
               bold
             >
-              New email address:
+              Novo email:
             </Text>
             <TextInput
               {...email("changeemailaddress")}
@@ -86,7 +86,7 @@ const SettingsChangeEmail: FC = () => {
         </Flex>
         <Button type="submit" color="blue" mt={[24, 3]} disabled={loading}>
           <Icon name={loading ? "spinner" : "refresh"} mr={2} stroke="white" />
-          {loading ? "Sending..." : "Update"}
+          {loading ? "Sending..." : "Atualizar"}
         </Button>
       </Col>
       <Text fontSize={15} color={message.color} mt={3}>
