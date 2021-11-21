@@ -12,7 +12,7 @@ const UrlInfoPage = () => {
     <AppWrapper>
       {!query.target ? (
         <H2 my={4} light>
-          404 | Link could not be found.
+          404 | Link não encontrado.
         </H2>
       ) : (
         <>
