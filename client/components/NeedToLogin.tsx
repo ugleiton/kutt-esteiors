@@ -63,11 +63,11 @@ const NeedToLogin = () => (
       mb={[32, 32, 0]}
     >
       <Title>
-        Manage links, set custom <b>domains</b> and view <b>stats</b>.
+        Gerenciar links, definir <b> domínios </b> personalizados e visualizar <b> estatísticas </b>.
       </Title>
       <Link href="/login">
-        <a href="/login" title="login / signup">
-          <Button>Login / Signup</Button>
+        <a href="/login" title="logar / cadastre-se">
+          <Button>Logar / cadastre-se</Button>
         </a>
       </Link>
     </Col>
