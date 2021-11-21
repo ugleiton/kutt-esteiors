@@ -24,18 +24,15 @@ const Features = () => (
       justifyContent="center"
       flexWrap={["wrap", "wrap", "wrap", "nowrap"]}
     >
-      <FeaturesItem title="Managing links" icon="edit">
-        Create, protect and delete your links and monitor them with detailed
-        statistics.
-      </FeaturesItem>
-      <FeaturesItem title="Custom domain" icon="shuffle">
-        Use custom domains for your links. Add or remove them for free.
+      <FeaturesItem title="Gerenciando links" icon="edit">
+        Crie, proteja e exclua seus links e monitore-os com detalhes
+        Estatisticas..
       </FeaturesItem>
       <FeaturesItem title="API" icon="zap">
-        Use the provided API to create, delete, and get URLs from anywhere.
+        Use a API fornecida para criar, excluir e obter URLs de qualquer lugar.
       </FeaturesItem>
-      <FeaturesItem title="Free &amp; open source" icon="heart">
-        Completely open source and free. You can host it on your own server.
+      <FeaturesItem title="Totalmente Grátis" icon="heart">
+        Este projeto é totalmente gratuito para uso dos Escoteiros RS.
       </FeaturesItem>
     </Flex>
   </ColCenterH>
