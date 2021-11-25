@@ -258,7 +258,7 @@ const Shortener = () => {
                 mb={2}
                 bold
               >
-                Domain:
+                Domínio:
               </Text>
               <Select
                 {...select("domain")}
