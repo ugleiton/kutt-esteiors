@@ -10,6 +10,7 @@ on:
 jobs:
   dockerhub-build-push:
     runs-on: ubuntu-latest
+    environment: DOCKER_HUB
     steps:
       -
         name: Checkout
